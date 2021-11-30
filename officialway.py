@@ -21,11 +21,20 @@ class Clevo_EC():
         EC.Write(Clevo_EC.FDAT, fanNr)
         EC.Write(Clevo_EC.FBUF, duty)
         EC.Write(Clevo_EC.FCMD, 0xC1)
+        
+    @staticmethod
+    def SetWhiteLedKB(level:int):
+        EC.Write(Clevo_EC.FDAT,0x0)
+        EC.Write(Clevo_EC.FBUF,level)
+        EC.Write(Clevo_EC.FCMD,0xCA)
+        
 
 if __name__=='__main__':
     Clevo_EC.SetFanDuty(1,100)
     Clevo_EC.SetFanDuty(2,100)
+    Clevo_EC.SetWhiteLedKB(5)
     import time
     time.sleep(1)
+    Clevo_EC.SetWhiteLedKB(0)
     Clevo_EC.SetFanDutyAuto(1)
     Clevo_EC.SetFanDutyAuto(2)
