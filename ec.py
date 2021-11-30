@@ -47,3 +47,10 @@ class EC:
         EC.Register.SetCmd(0x80)
         EC.Register.SetData(address)
         return EC.Register.GetData()
+    
+    @staticmethod
+    def Write(address:int,data:int):
+        EC.Register.SetCmd(0x81)
+        EC.Register.SetData(address)
+        EC.Register.SetData(data)
+    

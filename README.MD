@@ -15,3 +15,5 @@ print(Clevo_EC.GetTempFanDuty(1))
 * Phil Gibbons for windows usersapce port io [driver](https://www.highrez.co.uk/Downloads/InpOut32/)
 * [parallel64](https://github.com/tekktrik/parallel64)
 * ECInfo.dll By Candy Yang
+* [UEFITool](https://github.com/LongSoft/UEFITool)
+* iasl by Robert Moore
