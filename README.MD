@@ -2,6 +2,7 @@
 ## a tool to control clevo fan and get temperature via EC on windows,and it is easy to work on linx (just call inb and outb), this project aims to show how to control clevo laptop via EC
 ## Usage
 ```python
+# for linux pip3 install portio ,and run as root
 from clevoec import Clevo_EC
 # fanNr from 1,0-100 to set FanDuty
 Clevo_EC.SetFanDuty(1,100)
